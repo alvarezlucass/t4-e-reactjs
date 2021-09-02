@@ -1,7 +1,8 @@
-import { FaBars, FaShoppingCart } from 'react-icons/fa';
+import { FaBars, FaShoppingCart, FaStrava } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import NavBar from './NavBar';
+import { FcCamera, FcCustomerSupport } from "react-icons/fc";
+
 
 // Componets del NavBar, que contengan importación de componentes y sus CSS
 
@@ -91,9 +92,11 @@ export const NavBtnLink = styled(Link)`
   }
 `;
 export const ShoppingCart = styled(FaShoppingCart)`
- opacity: 0.2;
+ opacity: 1;
  display: block;
   color: black;
+  width: 100vw;
+  justify-content:flex-end;
   cursor: pointer;
   @media screen and (max-width: 768px) {
     display: block;
@@ -105,3 +108,10 @@ export const ShoppingCart = styled(FaShoppingCart)`
     cursor: pointer;
   }
 `
+export const Strava = styled(FaStrava)`
+`
+export const Camera = styled(FcCamera)`
+`
+export const CustomerSupport = styled(FcCustomerSupport)`
+`
+// FcCustomerSupport
