@@ -1,0 +1,13 @@
+.card {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5em;
+    align-content: stretch;
+    float: right;
+    height: auto;
+    position: relative;
+    
+}
+.Img {
+    width: 100%;
+}

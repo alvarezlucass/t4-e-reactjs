@@ -16,13 +16,17 @@ import './NavBar.css';
 // import Destinations from './Destinations/Destinations';
 
 
-export const NavBar =() => {
+export default function NavBar () {
         return(
         <>    
             <Nav>
             <NavLink to='/'>
                 <div className='logo'>
-                    <img src='../public/logo.jpg' alt='logo' /> 
+                <img
+                className="logo-nav"
+                src="https://scontent.feze11-1.fna.fbcdn.net/v/t1.6435-9/s526x395/174566556_207366334490173_3405746908693156807_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHHpElDZsUKEW-VbSVil08CyH8EZk3dCmTIfwRmTd0KZFwa2NNG9du9euU9Dmqo2L4&_nc_ohc=DP1QCVUrrFUAX8xQM1z&_nc_ht=scontent.feze11-1.fna&oh=d609e3412ed02db2ef1a1deb43e7ea7e&oe=615A322E"
+                alt="logo"
+                />
                 </div>
                 </NavLink>
                 <Bars />
