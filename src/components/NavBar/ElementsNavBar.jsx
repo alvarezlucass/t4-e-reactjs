@@ -94,17 +94,17 @@ export const NavBtnLink = styled(Link)`
 export const ShoppingCart = styled(FaShoppingCart)`
  opacity: 1;
  display: block;
-  color: black;
+  color: #256ce1;
   width: 100vw;
   justify-content:flex-end;
   cursor: pointer;
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 50;
+    position: relative;
+    top: 100;
     right: 2;
     transform: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 `
