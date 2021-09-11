@@ -2,6 +2,9 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
+import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
+
 // import CardGroup from 'react-bootstrap/CardGroup';
 // import Card from 'react-bootstrap/Card';
 
@@ -31,12 +34,14 @@ export default function ItemListContainer () {
   return (
     <>
     { loading ?
+      // <Spinner animation="border" />
+      <Spinner animation="grow" />
       // <h2> <VscLoading /> </h2>
-      <h2>Cargando ...</h2>
+      // <h2>Cargando ...</h2>
       :
       destinations.map(destination=> 
-      // <div key={ destination.id } ></div>
-    <div className="card">
+      <div key={ destination.id } >
+      <div className="card">
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src = { destination.img} />
       <Card.Body>
@@ -50,10 +55,19 @@ export default function ItemListContainer () {
         <ListGroupItem>  $ { destination.location} </ListGroupItem>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Reserva tu Lugar</Card.Link>
-        <Card.Link href="#">Ver Recomendaciones</Card.Link>
+        <center>
+          <Button variant="primary" size="lg" active>
+          Reserva tu Lugar
+          </Button>{' '}
+          <Button variant="secondary" size="lg" active>
+          Ver Recomendaciones
+          </Button>
+        {/* <Card.Link href="#">Reserva tu Lugar</Card.Link> */}
+        {/* <Card.Link href="#">Ver Recomendaciones</Card.Link> */}
+        </center>
       </Card.Body>
     </Card>
+    </div>
     </div> 
     // {<div className='card2'>
     //     <CardGroup>

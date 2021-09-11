@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import  NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Carousel from './components/Carousel/Carousel';
+import ItemCount from './components/ItemListContainer/ItemCount';
 
 
 
@@ -20,10 +21,15 @@ function App() {
         <div className='carousel'>
           <Carousel />
         </div>
-
+        <ItemCount />
       </main>
+      <Switch>   
 
-      <ItemListContainer />
+      <Route path="/ItemListContainer" exact>
+          <ItemListContainer />
+      </Route>
+      <ItemCount />
+      
       
       {/* <ItemListContainer /> */}
       {/* <ItemListContainer /> */}
@@ -46,6 +52,7 @@ function App() {
       
           </Switch>
       </main> */}
+        </Switch>
     </Router>
   );
 }
