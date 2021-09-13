@@ -51,6 +51,7 @@ export default function ItemListContainer () {
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
+      <ListGroupItem> Nivel { destination.level }</ListGroupItem>
         <ListGroupItem> Fecha { destination.date }</ListGroupItem>
         <ListGroupItem>  $ { destination.location} </ListGroupItem>
       </ListGroup>

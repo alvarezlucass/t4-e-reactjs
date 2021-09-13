@@ -1,4 +1,4 @@
-import { FaBars, FaShoppingCart, FaStrava } from 'react-icons/fa';
+import { FaBars, FaShoppingCart, FaStrava, FaSortAmountUpAlt } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FcCamera, FcCustomerSupport } from "react-icons/fc";
@@ -56,7 +56,7 @@ export const NavMenu = styled.div`
   white-space: nowrap; */
   @media screen and (max-width: 768px) {
     display: none;
-    color: black;
+    
   }
 `;
 
@@ -69,7 +69,7 @@ export const NavBtn = styled.nav`
   width: 100vw; */
   @media screen and (max-width: 768px) {
     display: none;
-    color: #fff;
+    
   }
 `;
 
@@ -88,7 +88,7 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    
+    color: #010606;
   }
 `;
 export const ShoppingCart = styled(FaShoppingCart)`
@@ -96,7 +96,7 @@ export const ShoppingCart = styled(FaShoppingCart)`
  display: block;
   color: #256ce1;
   width: 100vw;
-  justify-content:flex-end;
+  justify-content: right;
   cursor: pointer;
   @media screen and (max-width: 768px) {
     display: block;
@@ -104,14 +104,124 @@ export const ShoppingCart = styled(FaShoppingCart)`
     top: 100;
     right: 2;
     transform: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
   }
-`
+`;
 export const Strava = styled(FaStrava)`
-`
+justify-content: centre;
+@media screen and (max-width: 768px) {
+  display: none;
+  
+}
+`;
 export const Camera = styled(FcCamera)`
-`
+@media screen and (max-width: 768px) {
+  display: none;
+  
+}
+`;
 export const CustomerSupport = styled(FcCustomerSupport)`
-`
-// FcCustomerSupport
+@media screen and (max-width: 768px) {
+  display: none;
+  
+}
+`;
+export const SortAmountUpAlt = styled(FaSortAmountUpAlt)`
+@media screen and (max-width: 768px) {
+  display: none;
+  
+}
+`;
+
+// import React from 'react';
+// import { Route, Switch, useLocation, Link } from 'react-router-dom';
+// import { 
+//     Nav,
+//     NavLink,
+//     Bars,
+//     NavMenu,
+//     NavBtnLink,
+//     NavBtn,
+//     ShoppingCart,
+//     Camera,
+//     Strava,
+//     CustomerSupport,
+//     SortAmountUpAlt
+// } from './ElementsNavBar';
+// import './NavBar.css';  
+// import Destinations from './Destinations/Destinations';
+// import { level } from '../../assets/JsonDataBase'
+
+
+// export default function NavBar () {
+
+    // const [ listLevel, setListLevel] = useState ([])
+
+    // useEffect(() => {
+    //     getLevel()
+    // }, [])
+
+    // const getLevel = () => {
+    //     const data = new Promise ((res, reject) => res(level))
+    //         data.then ((res) => {
+    //             setListLevel(res)
+    //         })
+    // }
+        // return(
+        // <>    
+        //     <Nav>
+        //     <NavLink to='/'>
+        //         <div className='logo'>
+        //         <img
+        //         className="logo-nav"
+        //         src="https://scontent.feze11-1.fna.fbcdn.net/v/t1.6435-9/s526x395/174566556_207366334490173_3405746908693156807_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHHpElDZsUKEW-VbSVil08CyH8EZk3dCmTIfwRmTd0KZFwa2NNG9du9euU9Dmqo2L4&_nc_ohc=DP1QCVUrrFUAX8xQM1z&_nc_ht=scontent.feze11-1.fna&oh=d609e3412ed02db2ef1a1deb43e7ea7e&oe=615A322E"
+        //         alt="logo"
+        //         />
+        //         </div>
+        //         </NavLink>
+        //         <Bars />
+                
+        //         <NavMenu>
+        //             <NavLink to='/Destinations' exact>
+        //                 <a>Destinos </a>
+        //                 <Strava />
+                        
+        //             </NavLink>
+        //             <NavLink to='/'>
+        //                 <a>Recorrimos </a>     
+        //                 <Camera />                   
+        //             </NavLink>
+        //             <NavLink to='/'>
+        //                 <a>Niveles </a> 
+        //                 <SortAmountUpAlt />
+                       
+        //             </NavLink>
+        //             <NavLink to='/'>
+        //                 <a>Contactenos </a>      
+        //                 <CustomerSupport />                  
+        //             </NavLink>
+                    
+        //             {/* <NavLink to='/'>
+        //                 <a>Veremos3</a>                        
+        //             </NavLink> */}
+        //         </NavMenu>
+        //         <ShoppingCart />
+
+        //         <NavBtn>
+        //             <NavBtnLink to='/Profile/UserRegister'>Registrate</NavBtnLink>
+        //             <NavBtnLink to='/Profile/UserLogin'>Logueate</NavBtnLink>
+                    
+        //         </NavBtn>        
+        //     </Nav>
+        //     {/* <Route>
+//                 <Route exact path="/" />
+//                 <Route exact path="/destinations" />
+
+
+//             </Route> */}
+          
+            
+//         </>
+//     );
+// };

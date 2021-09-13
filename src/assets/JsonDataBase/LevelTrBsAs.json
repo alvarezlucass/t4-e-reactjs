@@ -1,0 +1,11 @@
+{
+"category":[
+{"id":1,"level":"Support"},
+{"id":2,"level":"Business Development"},
+{"id":3,"level":"Product Management"},
+{"id":4,"level":"Accounting"},
+{"id":5,"level":"Legal"},
+{"id":6,"level":"Engineering"},
+{"id":7,"level":"Services"}
+]
+}

@@ -25,10 +25,10 @@ function App() {
       </main>
       <Switch>   
 
-      <Route path="/ItemListContainer" exact>
+      <Route path="/" exact>
           <ItemListContainer />
       </Route>
-      <ItemCount />
+      
       
       
       {/* <ItemListContainer /> */}
