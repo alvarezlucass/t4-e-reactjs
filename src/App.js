@@ -17,17 +17,19 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <main>
-        <div className='carousel'>
-          <Carousel />
-        </div>
-        <ItemCount />
-      </main>
-      <Switch>   
+      <Switch>
+          <Route path="/" exact component={ItemListContainer} >
+            <Carousel />
+            <ItemCount />
+            <ItemListContainer />
+          </Route>
+          <Route path="/category/:idCategory" exact component={ItemListContainer} />
 
-      <Route path="/" exact>
-          <ItemListContainer />
-      </Route>
+            
+          
+          {/* <Route exact path="/ItemListContainer" >
+              <ItemListContainer />
+          </Route> */}
       
       
       

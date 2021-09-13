@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -50,29 +51,30 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">
-              Destinos
-                <Strava />
-                </NavLink>
-            </NavItem>
+              {/* <NavLink href="/">Destinos<Strava /></NavLink> */}
+                <Link to="/category/Destinos">
+                <NavLink href="/">Destinos<Strava /></NavLink>
+                </Link>
+                </NavItem>
             <NavItem>
-              <NavLink href="/">
-                trekking
-                <Camera />
-                </NavLink>
-            </NavItem>
+                <Link to="/category/trekking">
+                <NavLink href="/">trekking<Camera /></NavLink>
+                </Link>
+             </NavItem>
+              
+            
+            
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Niveles
-                <SortAmountUpAlt />
-              </DropdownToggle>
+            <Link to="/category/trekking">
+              <DropdownToggle nav caret>Niveles<SortAmountUpAlt /></DropdownToggle>
+            
               <DropdownMenu right>
                 {listLevel.map((item) => {
                     return <DropdownItem key={ item.id }> { item.level }</DropdownItem>
                   })
-                }
-                
+                }                
               </DropdownMenu>
+              </Link>
             </UncontrolledDropdown>
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
