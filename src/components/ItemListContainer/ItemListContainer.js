@@ -12,6 +12,9 @@ import Spinner from 'react-bootstrap/Spinner';
 import './ItemListContainer.css';
 import { getFetch } from '../utils/Mocks';
 import {useEffect, useState} from 'react';
+
+import { useParams} from 'react-router-dom';
+
 // import { VscLoading } from 'react-icons/fa';
 
 
@@ -19,16 +22,34 @@ export default function ItemListContainer () {
   
     const [destinations, setDestinations] = useState([])
     const [loading, setLoading] = useState(true)
+    const { idCategory } = useParams()
        
     useEffect(() => {
+
+      if (idCategory) {
+        getFetch
+        .then(res => {
+            setDestinations(res.filter(dest=>dest.level===idCategory))
+            
+        })
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+
+      } else {
         getFetch
         .then(res => {
             setDestinations(res)
-            setLoading(false)
+            // setLoading(false)
         })
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+      }
+        
           
        
-    }, [])
+    }, [idCategory])
+
+    console.log(idCategory)
         
   // console.log(personas)
   return (

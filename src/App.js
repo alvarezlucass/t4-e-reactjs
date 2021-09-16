@@ -10,6 +10,11 @@ import  NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Carousel from './components/Carousel/Carousel';
 import ItemCount from './components/ItemListContainer/ItemCount';
+import UserLogin from './components/Profiles/UserLogin';
+import UserRegister from './components/Profiles/UserRegister';
+import CartWidget from './components/CartWidget/CartWidget';
+// import Footer from './components/Footer/Footer';
+
 
 
 
@@ -24,37 +29,12 @@ function App() {
             <ItemListContainer />
           </Route>
           <Route path="/category/:idCategory" exact component={ItemListContainer} />
-
-            
-          
-          {/* <Route exact path="/ItemListContainer" >
-              <ItemListContainer />
-          </Route> */}
-      
-      
-      
-      {/* <ItemListContainer /> */}
-      {/* <ItemListContainer /> */}
-
-
-      
+          <Route path="/profile/UserLogin" exact component={ UserLogin } />
+          <Route path="/profile/UserRegister" exact component={ UserRegister } />
+          <Route path="/cart" exact component={ CartWidget } />
     
-      {/* <main>
-          <Switch>
-            <Route path="/" exact>
-              <Carousel />
-            </Route>
-            <Route path="/ItemListContainer" exact>
-              <ItemListContainer />
-              <ItemListContainer />
-              <ItemListContainer />
-            </Route>  
-          
-
-      
-          </Switch>
-      </main> */}
         </Switch>
+      {/* <Footer /> */}
     </Router>
   );
 }

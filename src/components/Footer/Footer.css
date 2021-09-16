@@ -1,0 +1,203 @@
+/* FOOTER */
+.subscribe {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #e7e7e7 ;
+    width: 100%;
+}
+
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscribe-title {
+    width: 100%;
+    max-width: 70%;
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 21px;
+}
+
+.form form{
+    width: 100%;
+    margin: 0px auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tablas img{
+    width: 100%;
+}
+
+.talles img{
+    width: 100%;
+}
+
+input[type='email'] {
+    width: 200px;
+    min-width: 100px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button[type='submit'] {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 12px;
+    margin-left: 1px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.text-danger {
+    text-align: left; 
+    font-size: 14px; 
+    color: #dc3545; 
+    padding-top: 2px;
+}
+
+.is-invalid {
+    border-color: #dc3545!important;
+    box-shadow: none;
+}
+
+.edit-list-button, .delete-list-button, #dlb, .create, .edit {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 12px;
+    margin-left: 1px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+    height: 35px; 
+}
+
+.edit-list-button {
+    margin-bottom: 2px;
+}
+
+button[type='submit']:hover{
+    background-color: tomato;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.container-footer .elements-container {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    min-width: auto;
+    max-width: 1430px;
+}
+
+.footer-element {
+    width: auto;
+}
+
+.footer-element .list-item {
+    padding: 3px 0;
+}
+
+.list-item a {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-element .title {
+    margin: 10px 0;
+}
+
+.footer-element .title h2 {
+    font-size: 18px;
+}
+
+.social-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-item i {
+    font-size: 20px;
+    color: black;
+}
+
+.subfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-top: 1px solid black;
+}
+
+a:hover {
+    color: tomato;
+}
+
+a {
+    transition: 0.5s;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button {
+    transition: 0.5s;
+}
+
+.user-button {
+    display: block;
+}
+
+.login-register {
+    display: none !important;
+}
+
+i:hover {
+    color: tomato;
+}
+
+i, .search-button, user-button, cart-button {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+article:hover .producto-footer .title {
+    color: tomato;
+}
+
+.producto-footer .title {
+    transition: 0.5;
+    overflow: hidden;
+    max-height: 38px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

@@ -51,23 +51,18 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              {/* <NavLink href="/">Destinos<Strava /></NavLink> */}
                 <Link to="/category/Destinos">
                 <NavLink href="/">Destinos<Strava /></NavLink>
                 </Link>
-                </NavItem>
+            </NavItem>
             <NavItem>
                 <Link to="/category/trekking">
                 <NavLink href="/">trekking<Camera /></NavLink>
                 </Link>
              </NavItem>
-              
-            
-            
             <UncontrolledDropdown nav inNavbar>
-            <Link to="/category/trekking">
-              <DropdownToggle nav caret>Niveles<SortAmountUpAlt /></DropdownToggle>
-            
+            <Link to="/category/Niveles">
+              <DropdownToggle nav caret>Niveles<SortAmountUpAlt /></DropdownToggle>            
               <DropdownMenu right>
                 {listLevel.map((item) => {
                     return <DropdownItem key={ item.id }> { item.level }</DropdownItem>
@@ -76,11 +71,20 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
               </DropdownMenu>
               </Link>
             </UncontrolledDropdown>
+            {/* <NavItem>
+                <Link to="/cart">
+                <NavLink href="/"><ShoppingCart  /></NavLink>
+                </Link>
+             </NavItem> */}
           </Nav>
-          {/* <NavbarText>Simple Text</NavbarText> */}
+     
         </Collapse>
-            <ShoppingCart />
-            <NavBtn>
+               
+                  <ShoppingCart  />
+                 
+            
+        
+                <NavBtn>
                     <NavBtnLink to='/Profile/UserRegister'>Registrate</NavBtnLink>
                     <NavBtnLink to='/Profile/UserLogin'>Logueate</NavBtnLink>                    
                 </NavBtn>

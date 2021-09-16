@@ -1,12 +1,14 @@
 import React from 'react';
+import './Footer.css';
+
 
 export default function Footer () {
     return (
         <>
-    {/* <section className="subscribe">
+    <section className="subscribe">
         <div className="subscribe-container">
             <div className="subscribe-title">
-                <h2>¡SUSCRIBITE PARA RECIBIR NUESTRAS NOVEDADES Y NUESTROS DESCUENTOS!</h2>
+                <h2>¡SUSCRIBITE PARA RECIBIR NUESTRAS NOVEDADES Y SALIDAS!</h2>
             </div>
             <div className="form">
                 <form className="subscribe-form" action="/" method="GET">
@@ -14,7 +16,7 @@ export default function Footer () {
                         <input type="email" name="email" id="email" placeholder="Email" />
                     </div>
                     <div className="submit-button">
-                        <button type="submit">SUSCRIBITE</button />
+                        <button type="submit">SUSCRIBITE</button>
                     </div>
                 </form>
             </div>
@@ -58,15 +60,15 @@ export default function Footer () {
                     <h2>CONECTA CON NOSTROS</h2>
                 </div>
                 <span>
-                    <p>@REFACTORSK8</p>
-                    <ul className="social-items">
+                    <p>t4-e</p>
+                    {/* <ul className="social-items">
                         <li className="social-item"><a href="https://www.youtube.com/user/ripcurl"><i className="fab fa-youtube"></i></a></li>
                         <li className="social-item"><a href="https://www.facebook.com/ripcurlargentina/?brand_redir=127130787367"><i className="fab fa-facebook-f"></i></a></li>
                         <li className="social-item"><a href="https://twitter.com/ripcurlarg"><i className="fab fa-twitter"></i></a></li>
                         <li className="social-item"><a href="https://www.instagram.com/ripcurl_usa/?hl=es"><i className="fab fa-instagram"></i></a></li>
                         <li className="social-item"><a href="/enConstruction"><i className="far fa-envelope"></i></a></li>
                         <li className="social-item"><a href="/enConstruction"></a><i className="fab fa-whatsapp"></i></a></li>
-                    </ul>
+                    </ul> */}
                 </span>
                 </div>
         </div>
@@ -75,7 +77,7 @@ export default function Footer () {
         <div className="copyright">
             <h2>© 2021 Trekking Buenos Aires</h2>
         </div>
-    </div> */}
+    </div>
 </>
 
     );
