@@ -11,8 +11,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText
+  DropdownItem,  
 } from 'reactstrap';
 import { 
       NavBtn,
@@ -20,7 +19,6 @@ import {
       ShoppingCart,
       Camera,
       Strava,
-      CustomerSupport,
       SortAmountUpAlt      
   } from './ElementsNavBar';
 import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
@@ -46,7 +44,7 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Trekking Buenos Aires</NavbarBrand>
+        <NavbarBrand href="/"> Trekking Buenos Aires</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -71,19 +69,12 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
               </DropdownMenu>
               </Link>
             </UncontrolledDropdown>
-            {/* <NavItem>
-                <Link to="/cart">
-                <NavLink href="/"><ShoppingCart  /></NavLink>
-                </Link>
-             </NavItem> */}
+            
           </Nav>
      
         </Collapse>
                
-                  <ShoppingCart  />
-                 
-            
-        
+               <ShoppingCart  />
                 <NavBtn>
                     <NavBtnLink to='/Profile/UserRegister'>Registrate</NavBtnLink>
                     <NavBtnLink to='/Profile/UserLogin'>Logueate</NavBtnLink>                    

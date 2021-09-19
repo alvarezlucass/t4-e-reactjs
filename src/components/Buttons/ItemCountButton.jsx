@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ButtonToggle } from 'reactstrap';
 
-export default function ItemCount () {
+export default function ItemCountButton () {
     const [count, setCount] = useState ( 0);
     const [rest, setRest] = useState ( 0);
 

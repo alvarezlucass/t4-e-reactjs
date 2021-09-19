@@ -1,85 +1,41 @@
-import React from 'react';
-import './Footer.css';
+import React from "react"
 
+const Footer = () => <footer className="page-footer font-small blue pt-4">
+    <div className="container-fluid text-center text-md-left">
+        <div className="row">
+            <div className="col-md-6 mt-md-0 mt-3">
+                <h5 className="text-uppercase">Footer Content</h5>
+                <p>Here you can use rows and columns to organize your footer content.</p>
+            </div>
 
-export default function Footer () {
-    return (
-        <>
-    <section className="subscribe">
-        <div className="subscribe-container">
-            <div className="subscribe-title">
-                <h2>¡SUSCRIBITE PARA RECIBIR NUESTRAS NOVEDADES Y SALIDAS!</h2>
-            </div>
-            <div className="form">
-                <form className="subscribe-form" action="/" method="GET">
-                    <div className="email">
-                        <input type="email" name="email" id="email" placeholder="Email" />
-                    </div>
-                    <div className="submit-button">
-                        <button type="submit">SUSCRIBITE</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+            <hr className="clearfix w-100 d-md-none pb-0"/>
 
-    <div className="container-footer">
-        <div className="elements-container">
-            <div className="footer-element footer-info">
-                <div className="title">
-                    <h2>INFO</h2>
-                </div>
-                <div className="list-items">
-                    <div className="list-item"><a href="/enConstruction">FAQ</a></div>
-                    <div className="list-item"><a href="/guiaTablas">GUIA DE TABLAS</a></div>
-                    <div className="list-item"><a href="/guiaTalles">GUIA DE TALLES</a></div>
-                </div>
+            <div className="col-md-3 mb-md-0 mb-3">
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
             </div>
-            <div className="footer-element footer-store">
-                <div className="title">
-                    <h2>STORE</h2>
-                </div>
-                <div className="list-items">
-                    <div className="list-item"><a href="/encontranos">LOCALIZACION</a></div>
-                    <div className="list-item"><a href="/comunicate">CONTACTANOS</a></div>
-                    <div className="list-item"><a href="/enConstruction">TERMINOS DE USO</a></div>
-                </div>
+
+            <div className="col-md-3 mb-md-0 mb-3">
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
             </div>
-            <div className="footer-element footer-company">
-                <div className="title">
-                    <h2>COMPANY</h2>
-                </div>
-                <div className="list-items">
-                    <div className="list-item"><a href="/enConstruction">POLITICAS DE ENVIOS</a></div>
-                    <div className="list-item"><a href="/enConstruction">POLITICAS DE RETORNO</a></div>
-                    <div className="list-item"><a href="/enConstruction">POLITICAS DE PRIVACIDAD</a></div>
-                </div>
-            </div>
-            <div className="footer-element footer-connect">
-                <div className="title">
-                    <h2>CONECTA CON NOSTROS</h2>
-                </div>
-                <span>
-                    <p>t4-e</p>
-                    {/* <ul className="social-items">
-                        <li className="social-item"><a href="https://www.youtube.com/user/ripcurl"><i className="fab fa-youtube"></i></a></li>
-                        <li className="social-item"><a href="https://www.facebook.com/ripcurlargentina/?brand_redir=127130787367"><i className="fab fa-facebook-f"></i></a></li>
-                        <li className="social-item"><a href="https://twitter.com/ripcurlarg"><i className="fab fa-twitter"></i></a></li>
-                        <li className="social-item"><a href="https://www.instagram.com/ripcurl_usa/?hl=es"><i className="fab fa-instagram"></i></a></li>
-                        <li className="social-item"><a href="/enConstruction"><i className="far fa-envelope"></i></a></li>
-                        <li className="social-item"><a href="/enConstruction"></a><i className="fab fa-whatsapp"></i></a></li>
-                    </ul> */}
-                </span>
-                </div>
         </div>
     </div>
-    <div className="subfooter">
-        <div className="copyright">
-            <h2>© 2021 Trekking Buenos Aires</h2>
-        </div>
+
+    <div className="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
     </div>
-</>
 
-    );
-}
+</footer>
 
+export default Footer
