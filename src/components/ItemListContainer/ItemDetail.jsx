@@ -1,10 +1,8 @@
 import React from 'react';
 import ItemCountButton from '../Buttons/ItemCountButton';
-
-import {
-    Card, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle
-  } from 'reactstrap';
+import './StyleItemListContainer/ItemDetail.css';
+ 
+//Dependence
 import { 
     NavBtn,
     NavBtnLink,       
@@ -14,25 +12,42 @@ import {
 export const ItemDetail = ({dest}) => {
     return (
         <>
-        <Card>
-        <CardBody>
-          <CardTitle tag="h5">{dest.location}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">{dest.level}</CardSubtitle>
-        </CardBody>
-        <img width="100%" src={dest.img} alt="Card image cap" />
-        <CardBody>
-          <CardText>{dest.description}</CardText>
-          <ItemCountButton />
-          <center>
-        <NavBtn>
-            <NavBtnLink to={`/destination/${dest.id}`}>Reserva tu lugar!!</NavBtnLink>
-        </NavBtn>          
-        </center>
-          <CardLink href="#">Another Link</CardLink>
-        </CardBody>
-      </Card>
-        
+        <div className="item-detail">
+          <div className="card-left">
+            <div className="location">
+              <h1>{dest.location}</h1>
+            <img className="img-detail" src={dest.img} alt="img" />
+            <div className="description">
+            <h3>Detalle de Salida</h3>
+              <h2>{dest.description}</h2>
+            </div>
+            <div className="date">
+            <h3>Fecha</h3>
+              <h2>{dest.date}</h2>
+            </div>
+            </div>
+          </div>
+          <div className="card-right">
+            <div className="level">              
+              <h5>Nivel:</h5><h1> {dest.level}</h1>
+            </div>
+            <div className="price">
+              <h3>Valor de la Salida</h3>
+              <h4>$ {dest.price}</h4>
+            </div>
 
+          <center>
+          <ItemCountButton />
+          <NavBtn>
+              <NavBtnLink to={`/destination/${dest.id}`}>Reserva tu lugar!!</NavBtnLink>
+          </NavBtn>          
+          </center>
+          </div>
+
+
+        </div>
+
+      
  
         </>
     )
