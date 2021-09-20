@@ -4,9 +4,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import Spinner from 'react-bootstrap/Spinner';
 
-
-
-
 import './StyleItemListContainer/ItemListContainer.css';
 import { getFetch } from '../utils/Mocks';
 import {useEffect, useState} from 'react';
@@ -15,9 +12,6 @@ import {
   NavBtn,
   NavBtnLink,       
 } from '../NavBar/ElementsNavBar';
-
-// import { VscLoading } from 'react-icons/fa';
-
 
 export default function ItemListContainer () {
   
@@ -45,9 +39,6 @@ export default function ItemListContainer () {
         .catch(err => console.log(err))
         .finally(() => setLoading(false))
       }
-        
-          
-       
     }, [idCategory])
 
     console.log(idCategory)

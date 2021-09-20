@@ -11,7 +11,7 @@ import {
 } from '../NavBar/ElementsNavBar';
 
 
-export const ItemDetail = (dest) => {
+export const ItemDetail = ({dest}) => {
     return (
         <>
         <Card>
@@ -33,7 +33,6 @@ export const ItemDetail = (dest) => {
       </Card>
         
 
-         <ItemCountButton />
  
         </>
     )
