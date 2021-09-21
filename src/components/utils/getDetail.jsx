@@ -2,7 +2,7 @@ const destination =
     {"id":1,
     "img":"https://robohash.org/suntsuntfacilis.png?size=50x50&set=set1",
     "title":"Aluminum Zirconium Trichlorohydrex Gly",
-    "description":"Dilation of fallopian tube",
+    "description":"Dilation of fallopian aklsjdfka alda dlfjaksld aslls dllda a lsalfasda llasdlaea llrer a llslslsls al laslddlada ll ladsftube",
     "level":"Legal",
     "location":"Ayacucho",
     "date":"5/8/2021",

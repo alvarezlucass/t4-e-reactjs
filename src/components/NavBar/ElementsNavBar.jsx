@@ -2,6 +2,8 @@ import { FaBars, FaShoppingCart, FaStrava, FaSortAmountUpAlt } from 'react-icons
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FcCamera, FcCustomerSupport } from "react-icons/fc";
+import { ButtonToggle } from 'reactstrap';
+
 
 
 // Componets del NavBar, que contengan importación de componentes y sus CSS
@@ -133,95 +135,57 @@ export const SortAmountUpAlt = styled(FaSortAmountUpAlt)`
   
 }
 `;
-
-// import React from 'react';
-// import { Route, Switch, useLocation, Link } from 'react-router-dom';
-// import { 
-//     Nav,
-//     NavLink,
-//     Bars,
-//     NavMenu,
-//     NavBtnLink,
-//     NavBtn,
-//     ShoppingCart,
-//     Camera,
-//     Strava,
-//     CustomerSupport,
-//     SortAmountUpAlt
-// } from './ElementsNavBar';
-// import './NavBar.css';  
-// import Destinations from './Destinations/Destinations';
-// import { level } from '../../assets/JsonDataBase'
-
-
-// export default function NavBar () {
-
-    // const [ listLevel, setListLevel] = useState ([])
-
-    // useEffect(() => {
-    //     getLevel()
-    // }, [])
-
-    // const getLevel = () => {
-    //     const data = new Promise ((res, reject) => res(level))
-    //         data.then ((res) => {
-    //             setListLevel(res)
-    //         })
-    // }
-        // return(
-        // <>    
-        //     <Nav>
-        //     <NavLink to='/'>
-        //         <div className='logo'>
-        //         <img
-        //         className="logo-nav"
-        //         src="https://scontent.feze11-1.fna.fbcdn.net/v/t1.6435-9/s526x395/174566556_207366334490173_3405746908693156807_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHHpElDZsUKEW-VbSVil08CyH8EZk3dCmTIfwRmTd0KZFwa2NNG9du9euU9Dmqo2L4&_nc_ohc=DP1QCVUrrFUAX8xQM1z&_nc_ht=scontent.feze11-1.fna&oh=d609e3412ed02db2ef1a1deb43e7ea7e&oe=615A322E"
-        //         alt="logo"
-        //         />
-        //         </div>
-        //         </NavLink>
-        //         <Bars />
-                
-        //         <NavMenu>
-        //             <NavLink to='/Destinations' exact>
-        //                 <a>Destinos </a>
-        //                 <Strava />
-                        
-        //             </NavLink>
-        //             <NavLink to='/'>
-        //                 <a>Recorrimos </a>     
-        //                 <Camera />                   
-        //             </NavLink>
-        //             <NavLink to='/'>
-        //                 <a>Niveles </a> 
-        //                 <SortAmountUpAlt />
-                       
-        //             </NavLink>
-        //             <NavLink to='/'>
-        //                 <a>Contactenos </a>      
-        //                 <CustomerSupport />                  
-        //             </NavLink>
-                    
-        //             {/* <NavLink to='/'>
-        //                 <a>Veremos3</a>                        
-        //             </NavLink> */}
-        //         </NavMenu>
-        //         <ShoppingCart />
-
-        //         <NavBtn>
-        //             <NavBtnLink to='/Profile/UserRegister'>Registrate</NavBtnLink>
-        //             <NavBtnLink to='/Profile/UserLogin'>Logueate</NavBtnLink>
-                    
-        //         </NavBtn>        
-        //     </Nav>
-        //     {/* <Route>
-//                 <Route exact path="/" />
-//                 <Route exact path="/destinations" />
-
-
-//             </Route> */}
-          
-            
-//         </>
-//     );
-// };
+export const BtnToggle = styled(ButtonToggle)`
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 24px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;
+export const BtnToggleGreen = styled(ButtonToggle)`
+  border-radius: 4px;
+  background: green;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 24px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;
+export const BtnToggleViolet = styled(ButtonToggle)`
+  border-radius: 4px;
+  background: violet;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 24px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;

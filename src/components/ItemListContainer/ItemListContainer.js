@@ -7,11 +7,8 @@ import Spinner from 'react-bootstrap/Spinner';
 import './StyleItemListContainer/ItemListContainer.css';
 import { getFetch } from '../utils/Mocks';
 import {useEffect, useState} from 'react';
-import { useParams} from 'react-router-dom';
-import { 
-  NavBtn,
-  NavBtnLink,       
-} from '../NavBar/ElementsNavBar';
+import { useParams} from 'react-router-dom'
+import ReserveBtn from '../Buttons/ReserveBtn';
 
 export default function ItemListContainer () {
   
@@ -67,9 +64,7 @@ export default function ItemListContainer () {
       </ListGroup>
       <Card.Body>
         <center>
-        <NavBtn>
-            <NavBtnLink to='/destination/idDestination'>Reserva tu lugar!!</NavBtnLink>
-        </NavBtn>          
+        <ReserveBtn />          
         </center>
       </Card.Body>
     </Card>

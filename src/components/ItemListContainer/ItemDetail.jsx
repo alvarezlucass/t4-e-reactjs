@@ -7,9 +7,16 @@ import {
     NavBtn,
     NavBtnLink,       
 } from '../NavBar/ElementsNavBar';
+import { useCartContext } from '../Context/cartContext';
 
 
 export const ItemDetail = ({dest}) => {
+
+  // const { addDest } = useCartContext ()
+
+  const onAdd= (cant)=>{
+    console.log(cant)
+  }
     return (
         <>
         <div className="item-detail">
@@ -37,10 +44,10 @@ export const ItemDetail = ({dest}) => {
             </div>
 
           <center>
-          <ItemCountButton />
-          <NavBtn>
+          <ItemCountButton initial={1} stock={5} onAdd={onAdd} />
+          {/* <NavBtn>
               <NavBtnLink to={`/destination/${dest.id}`}>Reserva tu lugar!!</NavBtnLink>
-          </NavBtn>          
+          </NavBtn>           */}
           </center>
           </div>
 

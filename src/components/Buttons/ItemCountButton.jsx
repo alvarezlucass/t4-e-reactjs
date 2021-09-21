@@ -1,24 +1,52 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ButtonToggle } from 'reactstrap';
+import { 
+    BtnToggle,
+    BtnToggleViolet,
+    BtnToggleGreen,       
+  } from '../NavBar/ElementsNavBar';
 
-export default function ItemCountButton () {
-    const [count, setCount] = useState ( 0);
-    const [rest, setRest] = useState ( 0);
+export default function ItemCountButton ({stock, initial, onAdd}) {
+    const [count, setCount] = useState ( initial);
+    const [changeBtn, setChangeBtn] = useState (true);
 
-    const handleOnClick = () => {
-        setCount (count +1);
-        setRest (rest -1 >0 );
+    function add () {
+        if (count < stock) {
+            setCount (count + 1)
+        }
     }
-    
+    function beef () {
+        if ( count > 1 ) {
+            setCount (count - 1)
+        }
+    }
+    const addCart =()=> {
+        onAdd (count)
+        setChangeBtn (false)
+    }
 
     return(
-        <>
-        <div className= "count+">
+        <>        
         <p> Cantidad: { count } </p>
-        <ButtonToggle color="success" onClick = { handleOnClick }>+</ButtonToggle>{handleOnClick}
-        <ButtonToggle color="danger"  onClick = {handleOnClick}>-</ButtonToggle>
+        <ButtonToggle color="success" onClick = { add }>+</ButtonToggle>
+        <ButtonToggle color="danger"  onClick = {beef}>-</ButtonToggle><br/>
+        {changeBtn ?
+            <BtnToggle onClick = {addCart}>Reserva YA!</BtnToggle>
+            :
+            <div>
+                <Link to="/cart">
+                    <BtnToggleViolet>Terminar la Compra</BtnToggleViolet>
+                </Link>
+                <Link to="/">
+                    <BtnToggleGreen>Agrega mas Destinos</BtnToggleGreen>
+                </Link>
+            </div>
 
-        </div>
+        }
+
+
+        
         
 
 
@@ -27,20 +55,3 @@ export default function ItemCountButton () {
     )
     
 }
-// const detectarBotones = (data) => {
-//     const botones = document.querySelectorAll('.card button')
-
-//     botones.forEach(btn => {
-//         btn.addEventListener('click', () => {
-//             // console.log(btn.dataset.id)
-//             const producto = data.find(item => item.id === parseInt(btn.dataset.id))
-//             producto.cantidad = 1
-//             if (carrito.hasOwnProperty(producto.id)) {
-//                 producto.cantidad = carrito[producto.id].cantidad + 1
-//             }
-//             carrito[producto.id] = { ...producto }
-//             // console.log('carrito', carrito)
-//             pintarCarrito()
-//         })
-//     })
-// }
