@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import Item from './Item';
 
 
- const ItemList = memo (({destinations}) => {
+const ItemList = memo (({destinations}) => {
     return (
         <>
            
@@ -10,7 +10,9 @@ import Item from './Item';
             
         </>
     )
-}
-, (oldDest, newDest) => oldDest.destinations.length === newDest.destinations.length)
 
+}
+)
+
+// (oldDest, newDest) => oldDest.destinations.length === newDest.destinations.length)
 export default ItemList

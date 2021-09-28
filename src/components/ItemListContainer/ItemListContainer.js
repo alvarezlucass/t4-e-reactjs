@@ -7,29 +7,29 @@ import { useParams} from 'react-router-dom'
 import { getFirestore } from '../../Services/getFirebase';
 import ItemList from './ItemList';
 
-export default function ItemListContainer ({greeting}) {
+export default function ItemListContainer () {
   
-    const [destinations, setDestinations] = useState([])
-    const [ item, setItem] = useState({})
+    const [destination, setDestination] = useState([])
+    const [ dest, setDest ] = useState({})
     const [loading, setLoading] = useState(true)
     // const [bool, setBool] = useState(true)
-    const { idCategory } = useParams()
+    const { idDestination } = useParams()
 
        
     useEffect(() => {
 
       const dbQuery = getFirestore()
 
-      dbQuery.collection('items').get()
+      dbQuery.collection('destination').get()
       .then(resp => {
-        console.log(resp)            // setDestinations(resp.docs.map(item=> console.log(item)))
+        setDestination(resp.docs.map(dest=> ({id: destination.id, ...destination.data})))
       })
       .catch(err => console.log(err))
       .finally(()=> setLoading(false))
       
-    }, [idCategory])
+    }, [idDestination])
 
-    console.log(idCategory)
+    
 
     // const handleClick = (e) => {
     //   e.preventDefault()
@@ -45,11 +45,10 @@ export default function ItemListContainer ({greeting}) {
         
   return (
     <>
-    <h1>{greeting}</h1>
     { loading ?
       <Spinner animation="grow" />
       :
-      <ItemList destinations={destinations} />
+      <ItemList destinations={destination} />
       
     }
     </>

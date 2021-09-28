@@ -7,26 +7,25 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ReserveBtn from '../Buttons/ReserveBtn';
 
-export default function Item ({destination}) {
+export default function Item ({destinations}) {
 return (
     <>
     
-    {/* destinations.map(destination=>  */}
-      <div key={ destination.id } >
+      <div key={ destinations.id } >
       <div className="card">
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src = { destination.img} />
+      <Card.Img variant="top" src = { destinations.img} />
       <Card.Body>
-        <Card.Title> { destination.title }</Card.Title>
+        <Card.Title> { destinations.title }</Card.Title>
         <Card.Text>
-          {destination.description}          
+          {destinations.description}          
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem> Nivel: { destination.level }        </ListGroupItem>
-        <ListGroupItem> Fecha: { destination.date }         </ListGroupItem>
-        <ListGroupItem> Ubicación: { destination.location}  </ListGroupItem>
-        <ListGroupItem> Precio: $ { destination.price}      </ListGroupItem>
+        <ListGroupItem> Nivel: { destinations.level }        </ListGroupItem>
+        <ListGroupItem> Fecha: { destinations.date }         </ListGroupItem>
+        <ListGroupItem> Ubicación: { destinations.location}  </ListGroupItem>
+        <ListGroupItem> Precio: $ { destinations.price}      </ListGroupItem>
       </ListGroup>
       <Card.Body>
         <center>
