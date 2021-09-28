@@ -14,5 +14,4 @@ const ItemList = memo (({destinations}) => {
 }
 )
 
-// (oldDest, newDest) => oldDest.destinations.length === newDest.destinations.length)
 export default ItemList
