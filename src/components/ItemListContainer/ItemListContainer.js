@@ -9,10 +9,10 @@ import ItemList from './ItemList';
 
 export default function ItemListContainer () {
   
-    const [destination, setDestination] = useState([])
+    const [destinations, setDestinations] = useState([])
     const [ dest, setDest ] = useState({})
     const [loading, setLoading] = useState(true)
-    const { idDestination } = useParams()
+    const { idDestination} = useParams()
 
        
     useEffect(() => {
@@ -21,11 +21,12 @@ export default function ItemListContainer () {
 
       dbQuery.collection('destination').get()
       .then(resp => {
-        setDestination(resp.docs.map(dest=> ({id: destination.id, ...destination.data})))
-        console.log(setDestination)
-        console.log(resp)
-        console.log(destination)
-      })
+        // console.log(resp)
+        setDestinations(resp.docs.map(des=> ( {id: des.id, ...des.data() })))
+        // console.log(setDestination)
+        // console.log(resp)
+        // console.log(destination)
+      })  
       .catch(err => console.log(err))
       .finally(()=> setLoading(false))
       
@@ -39,7 +40,7 @@ export default function ItemListContainer () {
     { loading ?
       <Spinner animation="grow" />
       :
-      <ItemList destinations={destination} />
+      <ItemList destinations={destinations} />
       
     }
     </>
