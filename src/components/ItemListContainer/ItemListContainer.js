@@ -1,36 +1,34 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import './StyleItemListContainer/ItemListContainer.css';
-
-import {useEffect, useState} from 'react';
-import { useParams} from 'react-router-dom'
-import { getFirestore } from '../../Services/getFirebase';
 import ItemList from './ItemList';
+import { useParams} from 'react-router-dom';
+import { getFirestore } from '../../Services/getFirebase';
+
+
 
 export default function ItemListContainer () {
   
     const [destinations, setDestinations] = useState([])
     const [ dest, setDest ] = useState({})
     const [loading, setLoading] = useState(true)
-    const { idDestination} = useParams()
+    const { idCategory} = useParams()
 
        
     useEffect(() => {
 
       const dbQuery = getFirestore()
 
-      dbQuery.collection('destination').get()
+      dbQuery.collection('destinations').get()
       .then(resp => {
-        // console.log(resp)
-        setDestinations(resp.docs.map(des=> ( {id: des.id, ...des.data() })))
-        // console.log(setDestination)
-        // console.log(resp)
-        // console.log(destination)
+        setDestinations( resp.docs.map( d=> ( {id: d.id, ...d.data() })))        
       })  
       .catch(err => console.log(err))
       .finally(()=> setLoading(false))
       
-    }, [idDestination])
+    }, [idCategory])
+            console.log(destinations)
+
 
     
 

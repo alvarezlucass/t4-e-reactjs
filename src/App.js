@@ -5,7 +5,7 @@ import { BrowserRouter as Router,
 } from 'react-router-dom';
 
 import { CartContext } from './components/Context/cartContext';
-import { useState, createContext } from 'react';
+import { useState, createContext, useContext  } from 'react';
 // Import Components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
@@ -22,7 +22,8 @@ export const ContextApp = createContext ("cart")
 
 function App() {
 
-  const [state, setState] = useState("destin")
+  const [state, setState] = useState("destinations")
+
   function viewDestin () {
     alert(state)
   }
@@ -34,18 +35,19 @@ function App() {
       <ContextApp.Provider value={{state, viewDestin }} >
         <Router>
           <NavBar />
+          
           <Switch>
-              <Route path="/" exact component={ItemListContainer} >
+              <Route exact path="/">
                 <Carousel />
-                <ItemListContainer />
+                <ItemListContainer /> 
               </Route>
+              <Route path="/" exact component={ItemListContainer} />
               <Route path="/category/:idCategory" exact component={ItemListContainer} />
               <Route path="/destination/:idDestination" exact component={ItemDetailContainer} />
               <Route path="/profile/UserLogin" exact component={ UserLogin } />
-              <Route path="/profile/UserRegister" exact component={ UserRegister } />
+              <Route path="/profile/UserRegister" exact component={ UserRegister } />              
               <Route path="/cart" exact component={ CartWidget } />
-        
-            </Switch>
+          </Switch>
           {/* <Footer /> */}
         </Router>
         </ContextApp.Provider>

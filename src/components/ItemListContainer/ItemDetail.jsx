@@ -3,21 +3,19 @@ import ItemCountButton from '../Buttons/ItemCountButton';
 import './StyleItemListContainer/ItemDetail.css';
  
 //Dependence
-// import { 
-//     NavBtn,
-//     NavBtnLink,       
-// } from '../NavBar/ElementsNavBar';
+import { 
+    NavBtn,
+    NavBtnLink,       
+} from '../NavBar/ElementsNavBar';
 import { useCartContext } from '../Context/cartContext';
 
 
 export const ItemDetail = ({dest}) => {
 
   const { addDest } = useCartContext ()
-  console.log(addDest);
 
   const onAdd= (cant)=>{
-    console.log(cant)
-    addDest ( { item:dest, quantity:cant}) //Ver si item debe ser reemplazado
+    addDest ( { dest, cant}) 
   }
     return (
         <>
@@ -47,9 +45,9 @@ export const ItemDetail = ({dest}) => {
 
           <center>
           <ItemCountButton initial={1} stock={5} onAdd={onAdd} />
-          {/* <NavBtn>
+          <NavBtn>
               <NavBtnLink to={`/destination/${dest.id}`}>Reserva tu lugar!!</NavBtnLink>
-          </NavBtn>           */}
+          </NavBtn>          
           </center>
           </div>
 
