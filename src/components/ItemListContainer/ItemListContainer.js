@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import './StyleItemListContainer/ItemListContainer.css';
 import ItemList from './ItemList';
@@ -27,7 +27,6 @@ export default function ItemListContainer () {
       .finally(()=> setLoading(false))
       
     }, [idCategory])
-            console.log(destinations)
 
 
     

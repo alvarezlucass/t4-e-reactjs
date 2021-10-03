@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import CartCountButton from '../Buttons/CartCountButton'
 import { useCartContext } from '../Context/cartContext'

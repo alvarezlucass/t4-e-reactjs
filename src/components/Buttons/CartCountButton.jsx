@@ -1,5 +1,3 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
 import { GiWaterRecycling } from 'react-icons/gi';
 import { FcEmptyTrash } from 'react-icons/fc';
 import { useCartContext  } from '../Context/cartContext';
@@ -11,7 +9,6 @@ import { useCartContext  } from '../Context/cartContext';
     const { emptyCart, deleteFromCart } = useCartContext()
 
 
-     //EmptyCart = Vaciar Carrito
     
 
     return (

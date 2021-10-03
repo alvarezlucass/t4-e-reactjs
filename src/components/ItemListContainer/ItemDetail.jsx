@@ -1,4 +1,3 @@
-import React from 'react';
 import ItemCountButton from '../Buttons/ItemCountButton';
 import './StyleItemListContainer/ItemDetail.css';
  
@@ -45,9 +44,9 @@ export const ItemDetail = ({dest}) => {
 
           <center>
           <ItemCountButton initial={1} stock={5} onAdd={onAdd} />
-          <NavBtn>
+          {/* <NavBtn>
               <NavBtnLink to={`/destination/${dest.id}`}>Reserva tu lugar!!</NavBtnLink>
-          </NavBtn>          
+          </NavBtn>           */}
           </center>
           </div>
 

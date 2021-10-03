@@ -1,4 +1,3 @@
-import React from 'react';
 import ItemCountButton from '../Buttons/ItemCountButton';
 
 export default function CartWidget () {

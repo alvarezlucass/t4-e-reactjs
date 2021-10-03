@@ -22,7 +22,7 @@ export const ContextApp = createContext ("cart")
 
 function App() {
 
-  const [state, setState] = useState("destinations")
+  const [state, setState] = useState("destination")
 
   function viewDestin () {
     alert(state)

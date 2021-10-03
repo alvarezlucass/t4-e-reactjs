@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -62,8 +62,8 @@ import { category } from '../../assets/JsonDataBase/LevelTrBsAs.json'
             <Link to="/category/Niveles">
               <DropdownToggle nav caret>Niveles<SortAmountUpAlt /></DropdownToggle>            
               <DropdownMenu right>
-                {listLevel.map((item) => {
-                    return <DropdownItem key={ item.id }> { item.level }</DropdownItem>
+                {listLevel.map((destinations) => {
+                    return <DropdownItem key={ destinations.id }> { destinations.level }</DropdownItem>
                   })
                 }                
               </DropdownMenu>

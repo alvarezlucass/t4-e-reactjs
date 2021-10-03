@@ -5,12 +5,12 @@ import {
 
   import React from 'react'
   
-  export default function ReserveBtn(destinations) {
+  export default function ReserveBtn(destination) {
       return (
           <>
           <center>
           <NavBtn>
-              <NavBtnLink to={`/destinations/${destinations.id}`}>Reserva tu lugar!!</NavBtnLink>
+              <NavBtnLink to={`/destination/${destination.id}`}>Reserva tu lugar!!</NavBtnLink>
           </NavBtn>           
         </center>  
               

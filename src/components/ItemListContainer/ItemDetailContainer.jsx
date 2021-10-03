@@ -1,4 +1,3 @@
-import React from 'react'
 import Spinner from 'react-bootstrap/Spinner';
 
 import { useState, useEffect } from 'react'
@@ -27,7 +26,6 @@ export default function  ItemDetailContainer() {
         
       }, [idDestination])
 
-console.log(idDestination);
 
     return (
         <>
