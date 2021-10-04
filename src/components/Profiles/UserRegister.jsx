@@ -25,15 +25,7 @@ const Example = (props) => {
           placeholder="password placeholder"
         />
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleUrl">Url</Label>
-        <Input
-          type="url"
-          name="url"
-          id="exampleUrl"
-          placeholder="url placeholder"
-        />
-      </FormGroup>
+      
       <FormGroup>
         <Label for="exampleNumber">Number</Label>
         <Input
@@ -53,7 +45,7 @@ const Example = (props) => {
         />
       </FormGroup>
       <FormGroup>
-        <Label for="exampleDate">Date</Label>
+        <Label for="exampleDate">Fecha de nacimiento</Label>
         <Input
           type="date"
           name="date"
@@ -61,15 +53,7 @@ const Example = (props) => {
           placeholder="date placeholder"
         />
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleTime">Time</Label>
-        <Input
-          type="time"
-          name="time"
-          id="exampleTime"
-          placeholder="time placeholder"
-        />
-      </FormGroup>
+      
       <FormGroup>
         <Label for="exampleColor">Color</Label>
         <Input
@@ -88,31 +72,7 @@ const Example = (props) => {
           placeholder="search placeholder"
         />
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleSelect">Select</Label>
-        <Input type="select" name="select" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleSelectMulti">Select Multiple</Label>
-        <Input
-          type="select"
-          name="selectMulti"
-          id="exampleSelectMulti"
-          multiple
-        >
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
-      </FormGroup>
+         
       <FormGroup>
         <Label for="exampleText">Text Area</Label>
         <Input type="textarea" name="text" id="exampleText" />
@@ -130,16 +90,9 @@ const Example = (props) => {
         <Input type="range" name="range" id="exampleRange" />
       </FormGroup>
       <FormGroup check>
-        <Label check>
-          <Input type="radio" /> Option one is this and that—be sure to
-          include why it's great
-        </Label>
+       
       </FormGroup>
-      <FormGroup check>
-        <Label check>
-          <Input type="checkbox" /> Check me out
-        </Label>
-      </FormGroup>
+      
     </Form>
   );
 }

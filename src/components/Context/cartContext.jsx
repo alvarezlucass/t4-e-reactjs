@@ -25,13 +25,17 @@ export const CartContext = ({ children }) => {
         const deleteProd = cartList.filter ((prod)=> prod.dest.id !== dest.dest.id);
         setCartList([...deleteProd])
     }
-    //
+    //Cantidad de unidades en el icono del carrito
     const iconCart = () => {
         return cartList.reduce (( acum, valor) => acum + valor.quantity, 0)
     }
     //totalPrice= precio total
     const totalPrice = () => {
         return cartList.reduce (( acum, valor) => (acum + (valor.quantity * valor.dest.price)),0)
+    }
+    //lineTotalPrice= precio total por producto
+    const lineTotalPrice = () => {
+        return cartList.reduce (( acum, valor) => (valor.quantity * valor.dest.price),0)
     }
 
     //emptyCart=Vaciar carrito
@@ -47,6 +51,7 @@ export const CartContext = ({ children }) => {
             deleteFromCart,
             iconCart,
             totalPrice,
+            lineTotalPrice,
         }}>
             { children }
         </cartContext.Provider>

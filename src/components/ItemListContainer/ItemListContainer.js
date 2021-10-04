@@ -10,7 +10,7 @@ import { getFirestore } from '../../Services/getFirebase';
 export default function ItemListContainer () {
   
     const [destinations, setDestinations] = useState([])
-    const [ dest, setDest ] = useState({})
+    // const [ dest, setDest ] = useState({})
     const [loading, setLoading] = useState(true)
     const { idCategory} = useParams()
 

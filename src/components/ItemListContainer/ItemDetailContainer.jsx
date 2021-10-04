@@ -9,7 +9,7 @@ import { getFirestore } from '../../Services/getFirebase';
 
 
 export default function  ItemDetailContainer() {
-    const [ dest, setDest] = useState ({})
+    const [destination, setDestinations] = useState([])
     const [loading, setLoading] = useState(true)
     const {idDestination} = useParams ()
 
@@ -17,10 +17,10 @@ export default function  ItemDetailContainer() {
 
         const dbQuery = getFirestore()
   
-        dbQuery.collection('items').doc('IdDestination').get()
+        dbQuery.collection('destinations').doc('idDestination').get()
         .then(resp => {
-          setDest ( {id: resp.id, ...resp.data()} )
-        })
+          setDestinations( {id: resp.id, ...resp.data() })        
+        })  
         .catch(err => console.log(err))
         .finally(()=> setLoading(false))
         
@@ -32,7 +32,7 @@ export default function  ItemDetailContainer() {
         { loading ?
             <Spinner animation="grow" />
       :
-        <ItemDetail  dest={dest} />
+        <ItemDetail  destination={destination} />
         }
         </>
     )

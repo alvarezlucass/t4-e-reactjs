@@ -5,7 +5,7 @@ import {
 
   import React from 'react'
   
-  export default function ReserveBtn(destination) {
+  export default function ReserveBtn( destination ) {
       return (
           <>
           <center>
