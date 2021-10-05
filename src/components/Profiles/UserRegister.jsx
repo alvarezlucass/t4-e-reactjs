@@ -1,11 +1,39 @@
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { userFormContext } from '../Context/userContext';
 
-const Example = (props) => {
+
+const UserRegister = ({condition = true}) => {
+
+  // const [ registerForm, setRegisterFromForm ] = useState ({
+  //   firtName:'',
+  //   lastName: '',
+  //   email: '',
+  //   password: '',
+      //  date: '',
+      //  dni: '',
+
+  // })
+
+  // const { formContext } = userFormContext();
+//   const handleOnSubmit = (e) => {
+//     e.preventDefault();
+// }
+// let createUsers = {}
+//       createUsers.date = firebase.firestore.Timestamp.fromDate( new Date());
+//       createUsers.buyer = registerForm
+//       createUsers.users = cartList.map(cartItem =>{
+//               const id = cartItem.i.id;
+//               const title = cartItem.i.title;
+//               const price = cartItem.i.price * cartItem.quantity;
+
+//                   return {id, title, price}
+
+
   return (
     <Form>
       <FormGroup>
-        <Label for="exampleEmail">Plain Text (Static)</Label>
-        <Input plaintext value="Some plain text/ static value" />
+        <Label for="exampleEmail">Por favor cargue Aqui, toda la información requerida</Label>
+        <Input plaintext value="Cada campo es importante para el registro de salidas " />
       </FormGroup>
       <FormGroup>
         <Label for="exampleEmail">Email</Label>
@@ -13,7 +41,7 @@ const Example = (props) => {
           type="email"
           name="email"
           id="exampleEmail"
-          placeholder="with a placeholder"
+          placeholder="Ingrese su email"
         />
       </FormGroup>
       <FormGroup>
@@ -22,28 +50,20 @@ const Example = (props) => {
           type="password"
           name="password"
           id="examplePassword"
-          placeholder="password placeholder"
+          placeholder="Ingrese su Clave por Favor"
         />
       </FormGroup>
       
       <FormGroup>
-        <Label for="exampleNumber">Number</Label>
+        <Label for="exampleNumber">Número de DNI</Label>
         <Input
           type="number"
-          name="number"
+          name="dni"
           id="exampleNumber"
-          placeholder="number placeholder"
+          placeholder="Ingrese su número de DNI"
         />
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleDatetime">Datetime</Label>
-        <Input
-          type="datetime"
-          name="datetime"
-          id="exampleDatetime"
-          placeholder="datetime placeholder"
-        />
-      </FormGroup>
+     
       <FormGroup>
         <Label for="exampleDate">Fecha de nacimiento</Label>
         <Input
@@ -55,40 +75,11 @@ const Example = (props) => {
       </FormGroup>
       
       <FormGroup>
-        <Label for="exampleColor">Color</Label>
-        <Input
-          type="color"
-          name="color"
-          id="exampleColor"
-          placeholder="color placeholder"
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleSearch">Search</Label>
-        <Input
-          type="search"
-          name="search"
-          id="exampleSearch"
-          placeholder="search placeholder"
-        />
-      </FormGroup>
-         
-      <FormGroup>
-        <Label for="exampleText">Text Area</Label>
-        <Input type="textarea" name="text" id="exampleText" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleFile">File</Label>
+        <Label for="exampleFile">Ingrese su Foto</Label>
         <Input type="file" name="file" id="exampleFile" />
-        <FormText color="muted">
-          This is some placeholder block-level help text for the above input.
-          It's a bit lighter and easily wraps to a new line.
-        </FormText>
+       
       </FormGroup>
-      <FormGroup>
-        <Label for="exampleRange">Range</Label>
-        <Input type="range" name="range" id="exampleRange" />
-      </FormGroup>
+      
       <FormGroup check>
        
       </FormGroup>
@@ -97,4 +88,4 @@ const Example = (props) => {
   );
 }
 
-export default Example;
+export default UserRegister;

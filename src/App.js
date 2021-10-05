@@ -13,10 +13,9 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Carousel from './components/Carousel/Carousel';
 import UserLogin from './components/Profiles/UserLogin';
 import UserRegister from './components/Profiles/UserRegister';
-import CartWidget from './components/CartWidget/CartWidget';
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
-import FormDestination from './components/FormContainer/DestinationForm'
+import DestinationForm from './components/FormContainer/DestinationForm';
 
 // import Footer from './components/Footer/Footer';
 
@@ -49,7 +48,7 @@ function App() {
               <Route path="/destination/:idDestination" exact component={ItemDetailContainer} />
               <Route path="/profile/UserLogin" exact component={ UserLogin } />
               <Route path="/profile/UserRegister" exact component={ UserRegister } />              
-              <Route path="/administrator/FormDestination" exact component={ FormDestination } /> 
+              <Route path="/administrator" exact component={ DestinationForm } /> 
               <Route path="/cart" exact component={ Cart } />
           </Switch>
           {/* <Footer /> */}
